@@ -1,0 +1,34 @@
+body {
+  font-family:sans-serif;
+  margin: 60px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.post-form, .post {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #6fb8cc;
+}
+
+.post-form input, .post-form textarea {
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  background: #6fb8cc;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.posts .post {
+  background: #6fb8cc;
+}
