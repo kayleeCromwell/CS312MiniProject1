@@ -2,21 +2,25 @@
 <html>
     <head>
         <title>MY BLOG</title>
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
     <body>
         <h1>Mini Blog</h1>
 
         <!--Create a post-->
-        <form action="/add" method="POST" class="create">
-            <input type="text" name="author" placeholder="Your name" required><br>
-            <input type="text" name="title" placeholder="Title" required><br>
-            <textarea name="content" placeholder="write here..." required></textarea><br>
-            <button type="submit">Publish</button>
-        </form>
+        <div class="create">
+            <h2>Make a Post</h2>
+            <form action="/add" method="POST" class="create">
+                <input type="text" name="author" placeholder="Your name" required><br>
+                <input type="text" name="title" placeholder="Title" required><br>
+                <textarea name="content" placeholder="write here..." required></textarea><br>
+                <button type="submit">Publish</button>
+            </form>
+        </div>
 
         <!-- POSTS -->
         <div class="posts">
+            <h2>POSTS</h2>
             <% if (posts.length === 0) { %>
                 <p>No posts yet. Be the first to write one!</p>
             <% } %>
@@ -24,7 +28,7 @@
                 <div class="post">
                     <h2><%= post.title %></h2>
                     <p><%= post.content %></p>
-                    <small>By <%= post.author %> on <%= post.date %></small>
+                    <small>By <%= post.author %></small>
                     <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
                         <button type="submit">Delete</button>
                     </form>
