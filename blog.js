@@ -28,7 +28,6 @@ app.post("/add", (req, res) => {
     author,
     title,
     content,
-    date: new Date().toLocaleString()
   };
   posts.push(newPost);
   res.redirect("/");
